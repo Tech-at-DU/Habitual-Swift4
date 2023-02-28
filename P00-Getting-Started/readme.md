@@ -1,7 +1,4 @@
----
-title: Getting Started
-slug: getting-started-habitual
----
+# Getting Started
 
 In this tutorial, you are going to make an iOS app that will help users track their daily
 habits. You will not be using any third party libraries to create this project, everything
@@ -40,12 +37,16 @@ It is okay to deviate from these settings though, and that is exactly what you a
 
 > [action]
 > In the File Navigator on the left hand side, right click on `Main.storyboard` and delete it, moving
-> it to the trash. Next, click on the project file at the top of the File Navigator. Under,
-> Deployment Information find the field called Main Interface and clear out the name value shown in the screenshot.
+> it to the trash. 
+>
+> Next, select project (top of the file), select the Build Settings Tab. Find: UIKit Main Storyboard File Base Name. Select this line and hit Delete. This should remove it. 
+
+![Remove Main](./assets/remove_main.png)
+
 > The last thing to do is opening the Info.plist file and press Command + F to look for the word "main"
 > Delete the  Storyboard Name row by clicking on the minus sign.
 
-![Remove Main](./assets/remove_main.png)
+![Remove Main](./assets/info-plist.png)
 
 With those first steps out of the way, you're well on your way to getting this app up and running
 with no storyboards! Before anything will actually show up, you need to change the main view that will
@@ -55,7 +56,7 @@ be loaded when your app launches. You will setup this change in the `SceneDelega
 > Open `SceneDelegate.swift` and locate the `scene(_: willConnectTo)` method. Replace
 > the code inside that function with the following:
 
-```            
+```Swift         
 // Create and set the window to be the same size as the screen
 guard let windowScene = (scene as? UIWindowScene) else { return }
 window = UIWindow(frame: UIScreen.main.bounds)
@@ -68,7 +69,6 @@ window?.rootViewController = mainController
 window?.makeKeyAndVisible()
 window?.windowScene = windowScene
 ```
->
 
 The first thing you need to do is create an instance of the `UIWindow` object and make it the size of the
 `main` screen's bounds. The next step is to create an instance of the main view controller, or the first
