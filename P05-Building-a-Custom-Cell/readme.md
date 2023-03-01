@@ -1,27 +1,20 @@
----
-title: Building a Custom Cell
-slug: building-a-custom-cell
----
+# Building a Custom Cell
 
 # Creating a custom cell
 
-For the table we just created we'll be using a custom cell. Sometimes it's easier to use the default cell if the content is simple. For this app we need more than a label in the cell's content. It should look like this:
+For the table you just created you will be using a custom cell. Sometimes it's easier to use the default cell if the content is simple. For this app we need more than a label. It should look like this:
 
 ![Cell](assets/Cell.png "custom cell")
 
 > [action]
-> Create a new file. File -> New -> File -> Cocoa Touch Class -> Next
->
-> Name it `HabitTableViewCell` and make it a subclass of UITableViewCell. Select the option "Also create XIB file". Then click Next.
+> Create a new file. File -> New -> File... -> Cocoa Touch Class -> Next. Name it `HabitTableViewCell` and choose Subclass of `UITableViewCell`. Select the option "Also create XIB file". Then click Next.
 
-This will create two new files. One will be the XIB file, where we'll arrange all the UI elements. And the other one is the corresponding Swift file to manage the cell and make further customizations.
+This will create two new files. One is the XIB file, where you will arrange all the UI elements in the cell. And the other one is the corresponding Swift file to manage the cell and make further customizations.
 
 > [action]
-> Go to the XIB file and make sure the cell is selected to set some properties in the Attributes Inspector.
->
-> First add an identifier "HabitCell" for cell reuse.
->
->Next select an Accessory, choose the option "Disclosure indicator", this is the arrow that you see in the right side of the cell. Later we'll add the logic to change the accessory for a Checkmark when the habit is completed.
+> Open the `HabitTableViewCell` XIB file and select "Habit Table View Cell" in the tree view. Then open the Attributes inspector set the identifier "HabitCell".
+
+> Next select an Accessory, choose the option "Disclosure indicator", this is the arrow that you see in the right side of the cell. Later we'll add the logic to change the accessory for a Checkmark when the habit is completed.
 
 This is how the properties should look.
 

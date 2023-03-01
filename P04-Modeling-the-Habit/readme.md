@@ -318,3 +318,4 @@ class HabitsTableViewController: UITableViewController {
 Note! `.book` or `.drop` is a shortcut for `Habit.Images.book` or `Habit.Images.drop`. When you type the dot Xcode will code hint you one of the images in the enum. 
 
 For now, nothing has changed on our table view. But, in the next section you will build a custom cell to display more information about the habit.
+
