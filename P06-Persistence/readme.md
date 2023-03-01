@@ -274,7 +274,8 @@ Great job folks! Pat yourself on the shoulder and let's move towards the next st
 private var persistence = PersistenceLayer()
 ```
 
-Remember our test data? The test data looks like this: 
+> [Action] 
+> Currently you have an array named `habits` that stores a mock up list of habits. Shown below. Delete this. 
 
 ```Swift
 var habits: [Habit] = [
@@ -282,7 +283,7 @@ var habits: [Habit] = [
     ...
 ```
 
-It's time to get rid of it since we'll be using our array stored in UserDefaults from now on. Let's make some changes to make sure of this.
+The code can be deleted now because the app is now getting the list of habits from `PersistenceLayer`. 
 
 First lets change the method of the table's data source that says how many rows there will be.
 
@@ -318,10 +319,21 @@ Whenever we load this view controller, we want to load the habits. We can achiev
     }
 ```
 
+The button in the upper right will have a problem. it's looking for the `habits` array that has now been deleted. 
+
+> [Action]
+> Remove the code inside the `@objc func pressAddHabit(_ sender: UIBarButtonItem) {`... It should look like this: 
+
+```Swift
+@objc func pressAddHabit(_ sender: UIBarButtonItem) {
+    // Everything here was removed! 
+}
+```
+
 That's it! We are now using our array of habits that lives in the persistence layer. This information will live as long as the app is installed in the phone.
 
 If you run the app now, you'll get an empty table, because we haven't saved any habits.
 
-Using the + to add a new habit will also fail! We need to add a form that will allow us to add a new Habit, input the title, and choose a category image. You'll do this in the next step. 
-
 If the app runs without errors and shows an empty list, it's working! 
+
+You should see the App name at the top anf the + button the upper right. 

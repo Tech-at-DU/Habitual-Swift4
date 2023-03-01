@@ -1,7 +1,4 @@
----
-title: Creating A Habit
-slug: creating-habits-habitual
----
+# Creating A Habit
 
 Our app so far looks to have many of the barebones components that we need to at least show our habits. However, how can we show off our habits without creating them first? Let's do that now!
 
@@ -19,21 +16,31 @@ Lastly, once the user is done with selecting their image, we will have a button 
 
 > [action]
 > Create a new `UIViewController` with the *XIB file choice* selected,
-> name it *AddHabitViewController*
+> name it *AddHabitViewController*. Choose File > New > File... Select "Cocoa Touch Class":
+
+![New file](./assets/new-file.png)
+
+> Set the name to "AddHabitViewController", then Choose Subclass of `UIViewController` and check "Also create XIB file"
+
+![choose UIViewController](./assets/choose_uiviewcontroller.png)
 
 This will be the view controller that will have our collection view, now let us add that.
 
+Note! Xcode was crashing when I moved XIB files in the file tree. Save file to views folder when creating it. 
+
+> [action]
+> Open `AddHabitViewController.xib` you should see a view. In the interface objects library, search for a `CollectionView` and drag and drop it into your new view controller.
+
+![add collectionview](./assets/add-collectionview.gif)
+
+A collection view (`UICollectionView` class) is a view that manages a collection of things. Similar to a table view that manages a list of things. Where the tableview displays its list in rows the collectionview is more flexible and display a grid or other visual arrrangement. 
+
 >[action]
-> In our interface objects library, search for a `CollectionView` and drag and drop it into your new view controller.
+> The collectionview, like the tableview, has a datasource and a delegate. You need to make these conections. Select the collectionview, open the connections inspector, and connect the **datasource** and **delegate** to the **file's owner**. 
 
-Collection Views might be a new concept to you, but not to worry, you have seen something similiar before. You can think of a collection view as a more flexible way to group a "collection" of items, just like a table view, but there is even more flexibility with collection views. Just like a table view, they have to know which view controller will be its delegate and its datasource.
+![Connect datasource and delegate](./assets/connect-datasource-delegate.gif)
 
->[action]
-> Before we forget, lets control drag from our collection view to the icon that says *file's Owner' and select just the boxes that say *datasource* and *delegate*
-
-> ![Remove Main](./assets/setCollectionView.png)
-
-Now our collection view knows what is responsible for handling the datasource and the delegate, in this case it will be the `AddHabitViewController`.
+Now your collection view knows what is responsible for handling the datasource and the delegate, in this case it will be the `AddHabitViewController` class.
 
 To finish off the actual layout on this view controller, let us add a button at the bottom that will be pressed once the user picks an image for their habit.
 
