@@ -22,51 +22,57 @@ This is how the properties should look.
 
 # Cell's content
 
-Now let's go back to the cell's design. In the XIB file, place a UIImageView, and two `UILabel`s. By now you already know how to add constraints to them.
+Now let's go back to the cell's design. In the `HabitTableViewCell.xib` XIB file, place a `UIImageView`, and two `UILabel`s. Make the cell look something like this: 
 
-A good idea is to group them in a UIStackView: pin the stackview to the edges of the cell, with distribution fill, spacing set to 10, and alignment set to fill.
+![cell](./assets/Cell.png)
+
+A good idea is to group them in a `UIStackView`: pin the stackview to the edges of the cell, with distribution fill, spacing set to 10, and alignment set to fill.
+
+![stack](./assets/stack-view-settings.png)
 
 Give the image a width of 50. The content mode should be Aspect Fit.
 
-Take into consideration that we have two labels in the same line. If there is a habit with a really long name, we want that content to be shown incomplete while keeping the streak count visible. Make the changes in CHP & CCRP to make this possible.
+Take into consideration that you have two labels in the same line. If there is a habit with a really long name, we want that content to be shown incomplete while keeping the streak count visible. Think about this and make your best call with the constraints. 
 
-For the title label, the values for this `UILabel` should be something like this.
-
-![constraints](assets/constraints.png "constraints")
+Tip! Setting the number of lines on a `UILabel` will allow the text of the label to wrap. This might be good for the title but not for the streak.
 
 # Connecting the UI
 
-Add the corresponding outlets to the HabitTableViewCell.swift file and make sure to connect them with the elements in the XIB file.
+Add the corresponding outlets to the `HabitTableViewCell.swift` file and make sure to connect them with the elements in the XIB file.
 
+You can do this any way you like. One method would be to add the lines below to `HabitTableViewView` class then drag from the circle in the margin to the corresponsing element in the view. 
+
+```Swift
+@IBOutlet weak var imageViewIcon: UIImageView!
+@IBOutlet weak var labelHabitTitle: UILabel!
+@IBOutlet weak var labelStreaks: UILabel!
 ```
-  @IBOutlet weak var imageViewIcon: UIImageView!
-  @IBOutlet weak var labelHabitTitle: UILabel!
-  @IBOutlet weak var labelStreaks: UILabel!
-```
+
+![add outlets](./assets/add-outlets.gif)
 
 # Registering the cell
 
 We need a way to tell the `UITableView` to use our new cell instead of the default cell. To do that we register the XIB file in the view controller that has the `UITableView`.
 
-First, add the following code to `HabitTableViewCell`
+First, add the following code to `HabitTableViewCell`. These lins of code go inside the class but not inside another method! 
 
-```
+```Swift
 // Set the identifier for the custom cell
 static let identifier = "HabitCell"
 
 // Returning the xib file after instantiating it
 static var nib: UINib {
-       return UINib(nibName: String(describing: self), bundle: nil)
+  return UINib(nibName: String(describing: self), bundle: nil)
 }
 ```
 
 Then, open `HabitsTableViewController.swift` to finish registering the cell.
 Add the following line of code inside the `viewDidLoad()` method.
 
-```
+```Swift
 tableView.register(
-            HabitTableViewCell.nib,
-            forCellReuseIdentifier: HabitTableViewCell.identifier
+  HabitTableViewCell.nib,
+  forCellReuseIdentifier: HabitTableViewCell.identifier
 )
 ```
 
@@ -76,14 +82,14 @@ We are done registering the cell and now it's time to use it in the `UITableView
 
 Find the `cellForRowAt` method and change its content with the following:
 
-```
+```Swift
 override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(
-            withIdentifier: HabitTableViewCell.identifier,
-            for: indexPath
-        ) as! HabitTableViewCell
+  let cell = tableView.dequeueReusableCell(
+    withIdentifier: HabitTableViewCell.identifier,
+    for: indexPath
+  ) as! HabitTableViewCell
 
-        return cell
+  return cell
 }
 ```
 
@@ -91,29 +97,30 @@ Here we are creating cells of type `HabitTableViewCell` and reusing them with ou
 
 # Setting the content
 
-Right now our cells are empty. We need to give them a habit to populate their UI elements.
+Right now your cells are empty. You need to give them a habit to populate their UI elements.
 
-Include these lines before returning the cell.
+Find the line: `let habit = habits[indexPath.row]` add this line below it. 
 
-```
-let habit = habits[indexPath.row]
+```Swift
 cell.configure(habit)
 ```
 
+To make it easy to confgure the cell you will give the cell a new method. Above you called the new `configure()` method but it hasn't been defined, yet! 
+
 Your `tableView(tableView:cellForRowAt:)` should look like this:
 
-```
+```Swift
 override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
   let cell = tableView.dequeueReusableCell( withIdentifier: HabitTableViewCell.identifier, for: indexPath) as! HabitTableViewCell
   let habit = habits[indexPath.row]
-  cell.configure(habit)
+  cell.configure(habit) // Shows an error, you'll fix this next!
   return cell
 }
 ```
 
-Here we take a habit from the array that corresponds to the index of the cell. Then we call a method call configure in the cell and send the habit. This method doesn't exist yet. Let's go back to `HabitTableViewCell` and create it.
+To configure a cell you will send a habit from the array to a cell by calling it's configure method and passing the habit as a parameter. Let's go back to `HabitTableViewCell.swift` and create the configure method.
 
-```
+```Swift
 func configure(_ habit: Habit) {
   self.imageViewIcon.image = habit.selectedImage.image
   self.labelHabitTitle.text = habit.title

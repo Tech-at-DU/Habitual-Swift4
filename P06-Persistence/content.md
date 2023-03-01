@@ -1,7 +1,4 @@
----
-title: Persisting Habits
-slug: persisting-habits
----
+# Persisting Habits
 
 # Persistence #
 
@@ -15,11 +12,15 @@ Right now we want to be able to persist habits after the user exits the applicat
 
 We are going to be using **NSUSerDefaults** to manage persistence in our app. To be able to save objects of type `Habit` we need to make a few changes in our struct to make it conform to the Encodable & Decodable protocol. We can achieve this by adding the `Codable` type to the struct.
 
+
+> [Action] 
+> In `Habit.swift` find the lines shown below and modify them. 
+
 ```swift
-struct Habit: Codable {
+struct Habit: Codable { // Add the Cofable Protocol
 ...
 
-enum Images: Int, Codable, CaseIterable {
+enum Images: Int, CaseIterable, Codable { // Add the Codable Protocol
 ...
 
 ```
