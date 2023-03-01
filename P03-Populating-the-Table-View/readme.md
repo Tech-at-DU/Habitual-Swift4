@@ -145,11 +145,14 @@ class HabitsTableViewController: UITableViewController {
 extension HabitsTableViewController {
 
     func setupNavBar() {
-        title = "Habitual"
+        title = "Habitual" // Add a title to the nav bar
+        // Create a UIBarButtonItem
         let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(pressAddHabit(_:)))
+        // Add the barbuttonitem to the navbar
         navigationItem.rightBarButtonItem = addButton
     }
 
+    // This function handle taps on the bar button item, see #selector above
     @objc func pressAddHabit(_ sender: UIBarButtonItem) {
         names.insert("Hello, World!", at: 0)
         let topIndexPath = IndexPath(row: 0, section: 0)
@@ -173,8 +176,6 @@ Here, you add a `UIBarButtonItem` to the right side of the navigationItem and wh
 Run the project and tap the add button a few times.
 
 > [info]
-> it's important that you update the dataSource, in our case the names array, BEFORE you use `tableView.insertRows(at:with:)`. Otherwise, you'll get an inconsistency error in your debugger.
-> The table view will fact check by invoking the number of rows.
->
+> You must update the dataSource, in our case the names array, BEFORE you use `tableView.insertRows(at:with:)`. Otherwise, you'll get an inconsistency error in your debugger. The table view will fact check by invoking the number of rows.
 
 This is great! But, let's populate more than just a list of Strings.
