@@ -12,7 +12,7 @@ For the table you just created you will be using a custom cell. Sometimes it's e
 This will create two new files. One is the XIB file, where you will arrange all the UI elements in the cell. And the other one is the corresponding Swift file to manage the cell and make further customizations.
 
 > [action]
-> Open the `HabitTableViewCell` XIB file and select "Habit Table View Cell" in the tree view. Then open the Attributes inspector set the identifier "HabitCell".
+> Open the `HabitTableViewCell` XIB file and select "Habit Table View Cell" in the tree view. Then open the Attributes inspector set the identifier "HabitImageCell".
 
 > Next select an Accessory, choose the option "Disclosure indicator", this is the arrow that you see in the right side of the cell. Later we'll add the logic to change the accessory for a Checkmark when the habit is completed.
 
