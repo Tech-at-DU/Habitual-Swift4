@@ -428,7 +428,7 @@ The idea is that you are sending over a boolean value when creating the cell to 
 > Open `HabitImageCollectionViewCell.swift` and find the `setImage` method. Make it match the code below:
 
 ```Swift
-func setImage(image: UIImage, withSelection: Bool){
+func setImage(image: UIImage, withSelection: Bool) {
     if withSelection {
       self.habitImage.image = image.withRenderingMode(.alwaysOriginal)
     } else {
