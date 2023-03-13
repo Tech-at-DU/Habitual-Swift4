@@ -1,10 +1,10 @@
 # Adding a UITableView
 
-Now it's time to setup our `UITableView`.
+Now it's time to set up our `UITableView`.
 
 # Using a UITableViewController
 
-The table view is one of the most common display elements on mobile devices. When you see a vertical scrolling list of information its very likely that its a table view. 
+The table view is one of the most common display elements on mobile devices. When you see a vertically scrolling list of information it's likely a table view. 
 
 Using a `UITableViewController` will give us some helpful functionality when our screen needs to display a `UITableView`. So, we'll have to change a few things to do this:
 
@@ -21,7 +21,7 @@ Then, rename the `MainViewController` to say `HabitsTableViewController`:
 > [action]
 > Rename the `MainViewController` class in the **MainViewController.swift** file 
 
-> Rename the file name of `MainViewController.swift` to **HabitsTableViewController.swift**. You can double click or select the file and hit return/enter.
+> Rename the file name of `MainViewController.swift` to **HabitsTableViewController.swift**. You can double-click or select the file and hit return/enter.
 
 > Rename `MainViewController.xib` to **HabitsTableViewController.xib**. 
 
@@ -35,12 +35,12 @@ You will get an error if you run the code at this point!
 
 The difference between a `UIViewController` and a `UITableViewController` is the `UITableViewController` uses a `UITableView` as its **view**. Whereas a `UIViewController` uses a blank `UIView`.
 
-Thus, you have to replace the view from a `UIView` to a `UITableView`:
+Thus, you have to replace the view from a `UIView` with a `UITableView`:
 
 > [action]
 > Delete the `UIView` we have right now with the label.
 
-> Then from the **Object Library**, drag out a new `UITableView` onto the canvas .
+> Then from the **Object Library**, drag out a new `UITableView` onto the canvas.
 
 > Now select the **File's Owner** and open the **Connections Inspector** (right click). Look for the **view** connection and connect it with the `UITableView`.
 
@@ -50,6 +50,6 @@ Thus, you have to replace the view from a `UIView` to a `UITableView`:
 
 Run the project and you should see a blank table view. 
 
-This might seem like a lot of work for a blank screen. The steps here are required to get the tableview to function. For your effort the tableview will do the work of displaying, scrolling and managing any amount of data. 
+This might seem like a lot of work for a blank screen. The steps here are required to get the tableview to function. For your effort, the tableview will do the work of displaying, scrolling and managing any amount of data. 
 
 The next step is to set the datasource. This tells the tableview what to display and how to display it. 
