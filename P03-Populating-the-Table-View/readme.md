@@ -4,7 +4,7 @@ We have an empty table, it's time to get some content showing up.
 
 # Populating the Table View
 
-A little about the `UITableViewController`, by default this class conforms to the necessary data source methods. These methods are required to populate a `UITableView`. Here are the two required methods:
+A little about the `UITableViewController`, by default this class, conforms to the necessary data source methods. These methods are required to populate a `UITableView`. Here are the two required methods:
 
 ```swift
 // return the number of rows for the given section
@@ -21,7 +21,7 @@ By default, `UITableViewController` implements these methods and returns 0 for t
 
 ```Swift
 class HabitsTableViewController: UITableViewController {
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -49,11 +49,11 @@ Look at `tableView(numberOfRowsInSection:)`, this method returns the number of r
 
 This method tells the tableview how many rows to display. 
 
-A tableview can be divided into sections and this method would also tell the tableview howmany sections. You can see rows and sections in apps like Settings and Calendar. 
+A tableview can be divided into sections and this method would also tell the tableview how many sections. You can see rows and sections in apps like Settings and Calendar. 
 
 ## Table View Cell at IndexPath
 
-Look at `tableView(cellForRowAt indexPath:)`, this "cell for row at index path" returns a `UITableViewCell` and configures that cell. A "cell" is one row displayed by the tableview. In this case all of the rows display the same thing: "Hello, world!"
+Look at `tableView(cellForRowAt indexPath:)`, this "cell for row at index path" returns a `UITableViewCell` and configures that cell. A "cell" is one row displayed by the tableview. In this case, all of the rows display the same thing: "Hello, world!"
 
 The cell for row at index path method determines what each row of the tableview looks like. 
 
@@ -63,12 +63,12 @@ This is a class used by `UITableView` to identify what cell we're referring to.
 An `IndexPath` contains two properties; **section** and **row** both are `Int`s.
 
 This gives us an `IndexPath` which depends on what we returned in the first method.
-If in the first method returned 5, the second method will ask for 5 different cells.
+If the first method returned 5, the second method will ask for 5 different cells.
 This will make more sense once we run a few examples.
 
 In our implementation for this method, we create a new cell by using `UITableViewCell(style:reuseIdentifier:)` and update the cell's textLabel to say *Hello, World!*.
 `UITableViewCell` has four styles we could use.
-Later, we'll create our own custom cell.
+Later, we'll create our custom cell.
 
 Let's run our project!
 We should see five rows that say *Hello, World!*.
@@ -89,12 +89,12 @@ class HabitsTableViewController: UITableViewController {
 }
 ```
 
-<!--  -->
+<!-- -->
 
 > [challenge]
 > Update the two table view methods to populate the table view to show the Strings from the names array.
 
-<!--  -->
+<!-- -->
 
 > [solution]
 > `tableView(numberOfRowsInSection:)` returns the count of the array.
@@ -124,7 +124,7 @@ override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexP
 }
 ```
 
-You changed the first method to return the count of the names array because you wanted one "cell" for each .
+You changed the first method to return the count of the names array because you wanted one "cell" for each.
 In the second method, we had to use the **indexPath.row** to check what cell we needed to populate.
 Then, we'd update the **textLabel.text** to be equal to the string at that **indexPath.row**.
 
@@ -134,7 +134,7 @@ Give it a run and see if the names appear on the table view!
 
 Here, you are going to be using one of the methods of our **tableView** to add a new row to the table view by pressing a button.
 
-Add the following to **HabitsTableViewController.swift**. the extension should go at the end of the file, after the class ends.
+Add the following to **HabitsTableViewController.swift**. the extension should go at the end of the file after the class ends.
 
 ```swift
 class HabitsTableViewController: UITableViewController {
@@ -143,7 +143,6 @@ class HabitsTableViewController: UITableViewController {
 
 // Add the extension 
 extension HabitsTableViewController {
-
     func setupNavBar() {
         title = "Habitual" // Add a title to the nav bar
         // Create a UIBarButtonItem
@@ -176,6 +175,6 @@ Here, you add a `UIBarButtonItem` to the right side of the navigationItem and wh
 Run the project and tap the add button a few times.
 
 > [info]
-> You must update the dataSource, in our case the names array, BEFORE you use `tableView.insertRows(at:with:)`. Otherwise, you'll get an inconsistency error in your debugger. The table view will fact check by invoking the number of rows.
+> You must update the dataSource, in our case the names array, BEFORE you use `tableView.insertRows(at:with:)`. Otherwise, you'll get an inconsistency error in your debugger. The table view will fact-check by invoking the number of rows.
 
 This is great! But, let's populate more than just a list of Strings.
