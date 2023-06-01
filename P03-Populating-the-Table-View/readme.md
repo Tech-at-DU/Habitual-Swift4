@@ -84,7 +84,7 @@ Let's add a property to our `HabitsTableViewController`; we'll be using this new
 
 ```Swift
 class HabitsTableViewController: UITableViewController {
-    var names: [String] = ["Alan", "Braus", "Adriana", "Mitchell", "Dani", "Jess", "Dan", "Meredith", "Dan", "Milad"]
+    var names: [String] = ["Alan", "Braus", "Adriana", "Mitchell", "Dani", "Jess", "Dan", "Meredith", "Milad"]
     ...
 }
 ```
