@@ -32,7 +32,7 @@ Create an app to track habits and encourage you to stick to them.
 - [Modeling a Habit](./P04-Modeling-the-Habit/)
 - [Building a Custom Cell](./P05-Building-a-Custom-Cell/)
 - [Persistence](./P06-Persistence/)
-- [Adding a CollecvtionView](./P07-Adding-a-Collection-View/)
+- [Adding a CollectionView](./P07-Adding-a-Collection-View/)
 - [Adding a Habit](./P08-Adding-a-Habit/)
 - [Detail a Habit](./P09-Detail-a-Habit/)
 - [Final Details](./P10-Final-Details/)
