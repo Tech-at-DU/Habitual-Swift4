@@ -179,6 +179,6 @@ Run the project and tap the add button a few times.
 
 This is great! But, let's populate more than just a list of Strings.
 
-- [Adding a TableView](./02-Adding-a-Table-View/)
-- [Modeling a Habit](./04-Modeling-the-Habit/)
+- [02 Adding a TableView](./02-Adding-a-Table-View/)
+- [04 Modeling a Habit](./04-Modeling-the-Habit/)
 

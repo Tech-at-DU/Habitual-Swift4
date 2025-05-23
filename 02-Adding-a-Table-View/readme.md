@@ -54,5 +54,5 @@ This might seem like a lot of work for a blank screen. The steps here are requir
 
 The next step is to set the datasource. This tells the tableview what to display and how to display it. 
 
-- [Main View](./01-Main-View/)
-- [Populating the TableView](./03-Populating-the-Table-View/)
+- [01 Main View](./01-Main-View/)
+- [03 Populating the TableView](./03-Populating-the-Table-View/)

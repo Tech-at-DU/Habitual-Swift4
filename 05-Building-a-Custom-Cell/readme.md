@@ -139,5 +139,5 @@ Run the app and see how it looks now. You should see the custom cell by this poi
 ![table](assets/table.png "table")
 
 
-- [Modeling a Habit](./04-Modeling-the-Habit/)
-- [Persistence](./06-Persistence/)
+- [04 Modeling a Habit](./04-Modeling-the-Habit/)
+- [06 Persistence](./06-Persistence/)

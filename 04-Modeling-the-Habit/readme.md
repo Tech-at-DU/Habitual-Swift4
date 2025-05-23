@@ -316,5 +316,5 @@ Note! `.book` or `.drop` is a shortcut for `Habit.Images.book` or `Habit.Images.
 
 For now, nothing has changed on our table view. But, in the next section, you will build a custom cell to display more information about the habit.
 
-- [Populating the TableView](./03-Populating-the-Table-View/)
-- [Building a Custom Cell](./05-Building-a-Custom-Cell/)
+- [03 Populating the TableView](./03-Populating-the-Table-View/)
+- [05 Building a Custom Cell](./05-Building-a-Custom-Cell/)

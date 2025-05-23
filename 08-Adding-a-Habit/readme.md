@@ -124,6 +124,6 @@ You almost have a fully functional app! It took a while to get to this stage but
 
 In this section, we applied most of our previous knowledge such as creating an `UIViewController` and we also allowed for communication between view controllers by creating a reference to a `ConfirmHabitViewController` and calling its habitImage variable to set that image based on what the user selected. We also put our persistence layer to good use by abstracting away the logic of creating a habit and saving that habit. This technique follows our single responsibility technique as our view controller itself is not responsible for actually creating the `Habit()` object. Onwards to the next section!
 
-- [Adding a CollectionView](./07-Adding-a-Collection-View/)
-- [Detail a Habit](./09-Detail-a-Habit/)
+- [07 Adding a CollectionView](./07-Adding-a-Collection-View/)
+- [09 Detail a Habit](./09-Detail-a-Habit/)
 

@@ -178,4 +178,4 @@ There is a lot more you can do to make this app even better and to keep practici
 - Rearrange habits using tap and hold instead of the edit button.
 - Implement a Search Bar in the habits table.
 
-- [Detail a Habit](./09-Detail-a-Habit/)
+- [09 Detail a Habit](./09-Detail-a-Habit/)

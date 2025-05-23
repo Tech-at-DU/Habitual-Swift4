@@ -334,5 +334,5 @@ If the app runs without errors and shows an empty list, it's working!
 
 You should see the App name at the top and the + button in the upper right. 
 
-- [Building a Custom Cell](./05-Building-a-Custom-Cell/)
-- [Adding a CollectionView](./07-Adding-a-Collection-View/)
+- [05 Building a Custom Cell](./05-Building-a-Custom-Cell/)
+- [07 Adding a CollectionView](./07-Adding-a-Collection-View/)
