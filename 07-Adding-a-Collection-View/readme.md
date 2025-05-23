@@ -443,3 +443,6 @@ Test your app. The habit list is still empty. Tap the + in the upper right. This
 # Summary
 
 In this section, you learned how to create a collection view and also how to create a custom collection view cell that updates with animations. You also practiced your Auto Layout skills to constrain the layouts that we created and then followed readability practices with `extensions` to make our code more readable. You also learned how to implement the datasource, delegate, and layout protocols for collection views and this allowed us to be able to display all the images of possible habits that we wanted. We made so much progress on this page! Take a break, you deserve it, and come back ready for part two of adding the habits.
+
+- [Persistence](./06-Persistence/)
+- [Adding a Habit](./08-Adding-a-Habit/)

@@ -112,3 +112,5 @@ If you see the label you created in the center of a white screen, you have linke
 
 I know that was a lot of setups to check if everything was working. It was important to make sure you had wired everything up correctly before moving on.
 
+- [Getting started](./00-Getting-Started/)
+- [Adding a TableView](./02-Adding-a-Table-View/)

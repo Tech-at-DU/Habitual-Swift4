@@ -178,3 +178,7 @@ Run the project and tap the add button a few times.
 > You must update the dataSource, in our case the names array, BEFORE you use `tableView.insertRows(at:with:)`. Otherwise, you'll get an inconsistency error in your debugger. The table view will fact-check by invoking the number of rows.
 
 This is great! But, let's populate more than just a list of Strings.
+
+- [Adding a TableView](./02-Adding-a-Table-View/)
+- [Modeling a Habit](./04-Modeling-the-Habit/)
+

@@ -25,17 +25,17 @@ Create an app to track habits and encourage you to stick to them.
 
 ## Tutorial 
 
-- [Getting started](./P00-Getting-Started/)
-- [Main View](./P01-Main-View/)
-- [Adding a TableView](./P02-Adding-a-Table-View/)
-- [Populating the TableView](./P03-Populating-the-Table-View/)
-- [Modeling a Habit](./P04-Modeling-the-Habit/)
-- [Building a Custom Cell](./P05-Building-a-Custom-Cell/)
-- [Persistence](./P06-Persistence/)
-- [Adding a CollectionView](./P07-Adding-a-Collection-View/)
-- [Adding a Habit](./P08-Adding-a-Habit/)
-- [Detail a Habit](./P09-Detail-a-Habit/)
-- [Final Details](./P10-Final-Details/)
+- [Getting started](./00-Getting-Started/)
+- [Main View](./01-Main-View/)
+- [Adding a TableView](./02-Adding-a-Table-View/)
+- [Populating the TableView](./03-Populating-the-Table-View/)
+- [Modeling a Habit](./04-Modeling-the-Habit/)
+- [Building a Custom Cell](./05-Building-a-Custom-Cell/)
+- [Persistence](./06-Persistence/)
+- [Adding a CollectionView](./07-Adding-a-Collection-View/)
+- [Adding a Habit](./08-Adding-a-Habit/)
+- [Detail a Habit](./09-Detail-a-Habit/)
+- [Final Details](./10-Final-Details/)
 
 ## Stretch challenges.
 

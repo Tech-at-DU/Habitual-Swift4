@@ -177,3 +177,5 @@ There is a lot more you can do to make this app even better and to keep practici
 - Add a validation when selecting an icon and entering a title. Tell the user if they are missing something and think about what's the best way to do this. Is it a hidden label? an alert?
 - Rearrange habits using tap and hold instead of the edit button.
 - Implement a Search Bar in the habits table.
+
+- [Detail a Habit](./09-Detail-a-Habit/)

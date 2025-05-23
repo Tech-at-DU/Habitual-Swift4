@@ -53,3 +53,6 @@ Run the project and you should see a blank table view.
 This might seem like a lot of work for a blank screen. The steps here are required to get the tableview to function. For your effort, the tableview will do the work of displaying, scrolling and managing any amount of data. 
 
 The next step is to set the datasource. This tells the tableview what to display and how to display it. 
+
+- [Main View](./01-Main-View/)
+- [Populating the TableView](./03-Populating-the-Table-View/)

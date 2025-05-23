@@ -137,3 +137,7 @@ This method sets the contents of the `UIImageView`, and the `UILabel`s and evalu
 Run the app and see how it looks now. You should see the custom cell by this point.
 
 ![table](assets/table.png "table")
+
+
+- [Modeling a Habit](./04-Modeling-the-Habit/)
+- [Persistence](./06-Persistence/)

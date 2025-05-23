@@ -237,3 +237,6 @@ Test your work. At this stage, you should be able to display the list of habits.
 Tapping a row should display the details view, and the details view should display the habit you tapped. 
 
 Tapping the "Complete for Today" button should mark that habit as complete. The count should increment by one, and the best streak should show 1. 
+
+- [Adding a Habit](./08-Adding-a-Habit/)
+- [Final Details](./10-Final-Details/)
