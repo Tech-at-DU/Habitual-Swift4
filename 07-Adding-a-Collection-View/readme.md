@@ -123,9 +123,9 @@ Now we are on our way to being able to write some code!
 ```Swift
 class HabitImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var habitImage: UIImageView!
-        static let identifier = "HabitImageCell"
+    static let identifier = "HabitImageCell"
 
-        static var nib: UINib {
+    static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
 

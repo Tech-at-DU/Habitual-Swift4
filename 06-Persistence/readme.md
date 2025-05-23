@@ -16,7 +16,7 @@ You are going to be using **NSUSerDefaults** to manage persistence in your app. 
 > In `Habit.swift` find the lines shown below and modify them. 
 
 ```swift
-struct Habit: Codable { // Add the Cofable Protocol
+struct Habit: Codable { // Add the Codable Protocol
 ...
 
 enum Images: Int, CaseIterable, Codable { // Add the Codable Protocol

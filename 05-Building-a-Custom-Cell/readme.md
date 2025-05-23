@@ -38,7 +38,7 @@ Tip! Setting the number of lines on a `UILabel` will allow the text of the label
 
 Add the corresponding outlets to the `HabitTableViewCell.swift` file and make sure to connect them with the elements in the XIB file.
 
-You can do this any way you like. One method would be to add the lines below to `HabitTableViewView` class and then drag from the circle in the margin to the corresponding element in the view. 
+You can do this any way you like. One method would be to add the lines below to `HabitTableViewCell` class and then drag from the circle in the margin to the corresponding element in the view. 
 
 ```Swift
 @IBOutlet weak var imageViewIcon: UIImageView!
