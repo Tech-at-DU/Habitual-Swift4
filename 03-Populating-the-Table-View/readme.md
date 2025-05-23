@@ -21,7 +21,7 @@ By default, `UITableViewController` implements these methods and returns 0 for t
 
 ```Swift
 class HabitsTableViewController: UITableViewController {
-        override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
     }
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
