@@ -63,4 +63,4 @@ Go ahead and run your project now and make sure that when it loads up you see th
 
 In this section, you learned how to create a new Xcode Project and remove the storyboard file! You also learned how to set up the settings in your project to use the view controllers that you created. Throughout the rest of the tutorial, you will be creating view controllers programmatically and loading the associated view files. You will need to get comfortable with this as you move forward. Head on over to the next section to learn how to set up your first view and load it up!
 
-- [01 Main View](./01-Main-View/)
+- [01 Main View](../01-Main-View/)

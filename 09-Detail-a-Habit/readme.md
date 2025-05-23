@@ -238,5 +238,5 @@ Tapping a row should display the details view, and the details view should displ
 
 Tapping the "Complete for Today" button should mark that habit as complete. The count should increment by one, and the best streak should show 1. 
 
-- [08 Adding a Habit](./08-Adding-a-Habit/)
-- [10 Final Details](./10-Final-Details/)
+- [08 Adding a Habit](../08-Adding-a-Habit/)
+- [10 Final Details](../10-Final-Details/)
